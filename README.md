@@ -1,16 +1,32 @@
 # digioutsource-assignment
 
-## Setup
+## Perequisites
 
-Clone the repository and install dependencies via npm:
+Lastest nodejs installed - https://nodejs.org/en/
+
+## Setup (once off)
+
+Clone the repository to your project folder
+```
+$ git clone https://github.com/Shakes03/digioutsource-assignment.git
+```
+
+Navigate to project folder and
+
+Install nightwatchjs - http://nightwatchjs.org/gettingstarted/#installation
+``` 
+$ npm install -g nightwatchjs
+```
+
+Install selenium-standalone - https://www.npmjs.com/package/selenium-standalone
+```
+$ npm install -g selenium-standalone
+$ npm seleium-standalone install
 
 ```
-$ cd tool-api-test
+
+### Run tests
 
 ```
-
-### Testing
-
-```
-$ docker-compose run --rm tool npm run test:all
+$ nightwatch
 ```
