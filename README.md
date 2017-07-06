@@ -15,7 +15,7 @@ Navigate to project folder and
 
 Install nightwatchjs - http://nightwatchjs.org/gettingstarted/#installation
 ``` 
-$ npm install -g nightwatchjs
+$ npm install -g nightwatch
 ```
 
 Install selenium-standalone - https://www.npmjs.com/package/selenium-standalone
