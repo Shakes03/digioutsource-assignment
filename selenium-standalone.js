@@ -1,0 +1,1 @@
+require('selenium-standalone/bin/selenium-standalone');
