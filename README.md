@@ -20,7 +20,7 @@ $ npm install -g nightwatch
 
 Install selenium-standalone - https://www.npmjs.com/package/selenium-standalone
 ```
-$ npm install -g selenium-standalone
+$ npm install selenium-standalone
 $ npm seleium-standalone install
 
 ```
@@ -30,3 +30,4 @@ $ npm seleium-standalone install
 ```
 $ nightwatch
 ```
+

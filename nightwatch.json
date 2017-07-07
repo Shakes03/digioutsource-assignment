@@ -7,30 +7,22 @@
   "globals_path" : "globals.js",
 
   "selenium" : {
-    "start_process" : false,
+    "start_process" : true,
+	"start_session" : true,
     "server_path" : "",
     "log_path" : "",
-    "port" : 4444,
-    "cli_args" : {
-      "webdriver.chrome.driver" : "",
-      "webdriver.gecko.driver" : "",
-      "webdriver.edge.driver" : ""
-    }
+    "port" : 4444
   },
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://google.com",
-      "selenium_port"  : 4444,
-      "selenium_host"  : "localhost",
-      "silent": true,
       "screenshots" : {
         "enabled" : false,
         "path" : ""
       },
       "desiredCapabilities": {
         "browserName": "chrome",
-        "marionette": true
+		"javascriptEnabled" : true
       }
     }
   }
