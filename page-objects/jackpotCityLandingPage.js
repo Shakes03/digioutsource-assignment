@@ -9,6 +9,7 @@ const actions = {
 
     this.api.url(fullUrl);
     this.api.maximizeWindow();
+
     return this;
   },
   trackingVariablesAreValid() {
