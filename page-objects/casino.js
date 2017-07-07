@@ -3,8 +3,7 @@
 const actions = {
   validateUsernameIs(name) {
     return this
-	.expect.element('@username').text.contains(name);
-	 
+	.expect.element('@username').text.contains(name);	 
   },
   clickTheDepositMenuOption() {    
       this.waitForElementVisible('@depositMenuOption');
@@ -20,10 +19,19 @@ const actions = {
 	  return this;
   },
     closeTheModal() {
+	  this.api.frame(null);	
       this.waitForElementVisible('@closeModal');
 	  this.click('@closeModal');
 	  return this;
   },
+  logoutOfCasino(){
+	  this.waitForElementVisible('@userDetailsToggle');
+	  this.click('@userDetailsToggle');
+	  this.waitForElementVisible('@logoutLink');
+	  this.click('@logoutLink');
+	  this.waitForElementNotPresent('@username');
+	return this;  
+ },
 };
 
 module.exports = {
@@ -37,6 +45,8 @@ module.exports = {
 	   locateStrategy: 'xpath'
    },
    closeModal: '.close-text',
+   userDetailsToggle: '.mdi-chevron-double-down.arrowStyle',
+   logoutLink: '#password-pop > div:nth-child(5) > a.white-text.title.ng-binding',   
   },
   commands: [actions],
 };

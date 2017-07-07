@@ -3,29 +3,25 @@ const validator = require('validator');
 
 const actions = {
   trackingVariablesAreValid() {
-   // this.expect.element('@txtAffiliateID').to.have.value.that.equals('bfp33171');
-    // this.expect.element('@txtAdID').to.have.value.that.equals('115299733123112');
+    this.expect.element('@txtAffiliateID').to.have.value.that.equals('bfp33171');
+     this.expect.element('@txtAdID').to.have.value.that.equals('115299733123112');
 	this.getValue('@txtVengeID', result => 
-		validator.isEmail(result.value+'')
+		validator.isUUID(result.value+'',[3,4,5])
 	);
     return this;
   },
-  loginToCasino() {
+  loginToCasino(username,password) {
     return this
 	  .waitForElementVisible('@loginButton')
 	  .click('@loginButton')
 	  .waitForElementVisible('@username')
       .clearValue('@username')
-	  .setValue('@username', 'daveautojpc')
+	  .setValue('@username', username)
 	  .clearValue('@password')
-	  .setValue('@password', 'tester123')
+	  .setValue('@password', password)
 	  .submitForm('@loginForm')
 	  .waitForElementNotPresent('@loginOverlay')
 	  .api.dismissAlert();
-  },
-  clickTheCreateSchemeButton() {
-    return this
-      .click('@schemeCreateButton');
   },
 };
 

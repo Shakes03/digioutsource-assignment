@@ -1,20 +1,24 @@
 'use strict';
 module.exports = {
-  '@tags': ['testing'],
   disabled:false,
-  'Open a browser': (browser) => {
+  'Test jackpot city casino for scenario 2': (browser) => {
     browser.url('http://www.jackpotcitycasino.com?s=bfp33171&a=115299733123112');
-    // browser.maximizeWindow();
-    const landingPage = browser.page.landingPage();
-	const casinoHomePage = browser.page.casinoHomePage();
+    browser.maximizeWindow();
+    
+	const landingPage = browser.page.jackpotCityLandingPage();
+	const casino = browser.page.casino();
 	
 	landingPage.trackingVariablesAreValid();
-	landingPage.loginToCasino();
-	casinoHomePage.validateUsernameIs('daveautojpc');
-	casinoHomePage.clickTheDepositMenuOption();
-	casinoHomePage.visaIsDisplayedAndAvaliable();
-	browser.saveScreenshot('bankingPage');
-	casinoHomePage.closeTheModal;
+	landingPage.loginToCasino('daveautojpc','tester123');
+	
+	casino.validateUsernameIs('daveautojpc');	
+	casino.clickTheDepositMenuOption();
+	casino.visaIsDisplayedAndAvaliable();
+	
+	browser.saveScreenshot('screenshots/scenario2-bankingPage.jpg');
+	
+	casino.closeTheModal();
+	casino.logoutOfCasino();
 	
     browser.end();
   },

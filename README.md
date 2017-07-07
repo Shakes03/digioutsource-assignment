@@ -3,31 +3,24 @@
 ## Perequisites
 
 Lastest nodejs installed - https://nodejs.org/en/
+Chrome browser installed
 
-## Setup (once off)
+## Setup
 
 Clone the repository to your project folder
 ```
 $ git clone https://github.com/Shakes03/digioutsource-assignment.git
 ```
 
-Navigate to project folder and
+Navigate to project folder and install dependencies
 
-Install nightwatchjs - http://nightwatchjs.org/gettingstarted/#installation
 ``` 
-$ npm install -g nightwatch
+$ npm install
 ```
 
-Install selenium-standalone - https://www.npmjs.com/package/selenium-standalone
-```
-$ npm install selenium-standalone
-$ npm seleium-standalone install
+### Execute tests
 
 ```
-
-### Run tests
-
-```
-$ nightwatch
+$ npm run test
 ```
 

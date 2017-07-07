@@ -1,0 +1,28 @@
+{
+  "name": "digioutsource-assignment",
+  "version": "1.0.0",
+  "description": "## Perequisites",
+  "main": "globals.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "nightwatch": "^0.9.16",
+    "selenium-standalone": "^6.5.0",
+    "validator": "^7.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node selenium-standalone.js install && node nightwatch.js --retries 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shakes03/digioutsource-assignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shakes03/digioutsource-assignment/issues"
+  },
+  "homepage": "https://github.com/Shakes03/digioutsource-assignment#readme"
+}
