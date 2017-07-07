@@ -14,7 +14,7 @@ $ git clone https://github.com/Shakes03/digioutsource-assignment.git
 
 Navigate to project folder and install dependencies
 
-``` 
+```
 $ npm install
 ```
 
@@ -23,4 +23,6 @@ $ npm install
 ```
 $ npm run test
 ```
-
+### Troubleshooting
+Cert issues run 
+`set NODE_TLS_REJECT_UNAUTHORIZED=0`
